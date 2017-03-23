@@ -1,0 +1,2 @@
+class ItPeople
+end
