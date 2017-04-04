@@ -23,7 +23,10 @@ class ActorsTestClass < Test::Unit::TestCase
 
   def test_if_it_possible_to_add_advertising
     
-     @media.add_advertising(@it_people.telephone_number);
+     @media.add_advertising("5 55 555");
+     assert_not_nil(@media.ads);
+     assert_true @media.ads.any?
+     assert_equal "5 55 555", @media.ads.first
 
   end  
 
