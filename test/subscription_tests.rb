@@ -8,7 +8,7 @@ class SubscriptionTests < Test::Unit::TestCase
 	def setup
   
 	  @media = Media.new
-	
+	  @it_people = ItPeople.new
 	end
 
 	def test_if_it_possible_to_add_advertising
@@ -25,5 +25,18 @@ class SubscriptionTests < Test::Unit::TestCase
 		assert_not_nil @media.subscribers
 
 	end	
+  
+  def test_if_client_can_be_added_to_subscribers_list
+		
+		@media.add_to_subscribers @it_people
+	
+	end
 
+  def test_if_there_an_exception_if_there_was_no_publicable_implementation_on_entry
+	
+		assert_raises do
+      @media.add_to_subscribers 125
+		end
+
+	end
 end
