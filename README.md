@@ -1,1 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/0sy8rrxut4o0k960/branch/trunk?svg=true)](https://ci.appveyor.com/project/ruby/ruby/branch/trunk)
+To jest projekt który jest napisany na potrzeby konkursu Daj Się Poznać 2017.
+
+[![Build Status](https://travis-ci.org/coola/xp-simulator.svg?branch=master)]
