@@ -39,4 +39,17 @@ class SubscriptionTests < Test::Unit::TestCase
     end
 
   end
+
+  def test_receiving_information
+
+    @client = Client.new
+    @media.add_advertising("5 55 555")
+    @media.add_to_subscribers @client
+    @media.broadcast
+    assert_not_empty @client.ads
+
+  end
+
+
+
 end

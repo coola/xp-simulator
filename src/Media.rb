@@ -21,4 +21,8 @@ class Media
 
   end
 
+  def broadcast
+    @subscribers.each { |subscriber| subscriber.publish @ads }
+  end
+
 end
